@@ -1,3 +1,5 @@
+import os
+
 from griptape.drivers import GriptapeCloudEventListenerDriver, GriptapeCloudObservabilityDriver
 from griptape.events import EventListener
 from griptape.rules import Rule
@@ -5,7 +7,7 @@ from griptape.structures import Agent
 from griptape.observability import Observability
 
 observability_driver = GriptapeCloudObservabilityDriver(service_name="example-observable-structure")
-event_listener_driver = GriptapeCloudEventListenerDriver()
+event_listener_driver = GriptapeCloudEventListenerDriver(api_key=os.environ["GT_CLOUD_API_KEY"])
 
 with Observability(observability_driver=observability_driver):
     agent = Agent(
