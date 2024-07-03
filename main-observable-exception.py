@@ -15,3 +15,5 @@ with Observability(observability_driver=observability_driver):
         event_listeners=[EventListener(driver=event_listener_driver)]
     )
     agent.run("Name an animal")
+
+    raise Exception("Observable exception")
