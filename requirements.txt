@@ -1,1 +1,1 @@
-griptape[all]@git+https://github.com/griptape-ai/griptape@feature/observable-tags
+griptape[all]@git+https://github.com/griptape-ai/griptape@release/cloud-unreleased
